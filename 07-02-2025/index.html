@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg" alt="Image" height="100px">
+        <figcaption>A sample figure</figcaption>
+    </figure>    
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">Your Browser doesnt support canvas</canvas>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+    <br>
+    <button onclick="getLocation()">Click to get Geo Location</button>
+    <p id="location"></p>
+    <a href="https://google.com">Go to google.com</a>
+    <table border="1" >
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>Data 1 row 1</td>
+            <td>Data 2 row 1</td>
+        </tr>
+        <tr>
+            <td>Data 1 row 2</td>
+            <td>Data 2 row 2</td>
+        </tr>
+        <tr>
+            <td>Data 1 row 3</td>
+            <td>Data 2 row 3</td>
+        </tr>
+    </table>
+    <audio src="./Luckkanna Mate Nillu-L V Revanth.m4a" controls >
+        Your brwoser doesnt support audio
+    </audio><br>
+    <video src="https://media.istockphoto.com/id/472610075/video/digital-countdown.mp4?s=mp4-640x640-is&k=20&c=GB-a8HfVRnxypx2waeyjSj21UFXYz1dYpBlQ43UUoAY=" controls height="100px">
+        Your brwoser doesnt support audio
+    </video>
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else{
+                document.getElementById("location").innerText = "your browser doesnt support geo location";
+            }
+        }
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            document.getElementById("location").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+        }
+    </script>
+</body>
+</html>
