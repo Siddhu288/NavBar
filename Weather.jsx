@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 const Weather = () => {
   const [weather, setWeather] = useState(null);
-  const [city] = useState('Kurnool'); // You can make this dynamic
+  const [city] = useState('Kurnool'); 
   const API_KEY = 'aabf65f1a45ed5491a00b3d18dd378b5'; // Replace with your actual API key
 
   useEffect(() => {
